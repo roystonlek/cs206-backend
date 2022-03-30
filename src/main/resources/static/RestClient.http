@@ -1,0 +1,218 @@
+### Preset - POST a preset under a specific user
+POST http://localhost:8080/users/1/presets
+Content-Type: application/json
+
+{
+    "name":"Yogurt",
+    "ranking1":"Marigold",
+    "ranking2":"Marigold",
+    "ranking3":"Marigold",
+    "ranking4":"Marigold",
+    "val1":"lo",
+    "val2":"lo",
+    "val3":"lo",
+    "val4":"lo"
+}
+
+###
+POST http://localhost:8080/users/1/presets
+Content-Type: application/json
+
+{
+    "name":"Yogurt",
+    "factor1":"Sugar Level",
+    "factor2":"Protein",
+    "factor3":"Calorie"
+}
+
+### Preset - GET all the presets under a specific user
+GET http://localhost:8080/users/3/presets
+
+### Preset - DELETE a preset under a specific user
+DELETE http://localhost:8080/users/1/presets/2
+
+### Preset - DELETE all presets under a specific user
+DELETE http://localhost:8080/users/1/presets
+
+#-----------------------------------------------------------------------------------------------
+
+### Product - POST
+POST http://localhost:8080/products
+Content-Type: application/json
+
+{
+    "name":"Yogurt2",
+    "brand":"Marigold",
+    "imgUrl":"nimei",
+    "price":1.2,
+    "calories":1.2,
+    "sugar":1.2,
+    "fat":1.2,
+    "protein":1.2,
+    "sodium":1.2,
+    "fibre": 1.2
+
+}
+
+### Product - GET reco all products
+POST http://localhost:8080/products/yogurt/getReco/
+Content-Type: application/json
+
+
+
+
+### Product - GET all products
+GET http://localhost:8080/products
+
+### Product - GET a product by specifying product ID
+GET http://localhost:8080/products/1
+
+### Product - GET all products under a brand
+GET http://localhost:8080/products/brand/Meiji
+
+
+### Product - UPDATE a product by specifying product ID
+PUT http://localhost:8080/products/1
+Content-Type: application/json
+
+{
+    "name":"yoguru",
+    "price":2.6,
+    "calories":2.6,
+    "sugar":2.6,
+    "fat":2.6,
+    "protein":2.6,
+    "sodium":2.6,
+    "fibre": 2.6
+}
+
+### Delete a product by specifying product ID
+DELETE http://localhost:8080/products/1
+
+#-----------------------------------------------------------------------------------------------
+### Cart 
+POST http://localhost:8080/users/1/cart
+Content-Type: application/json
+
+{
+    "id":2,
+    "name":"Yogurt2",
+    "brand":"Marigold",
+    "imgUrl":"nimei",
+    "price":1.2,
+    "calories":1.2,
+    "sugar":1.2,
+    "fat":1.2,
+    "protein":1.2,
+    "sodium":1.2,
+    "fibre": 1.2
+
+}
+
+#-----------------------------------------------------------------------------------------------
+
+### Get cart
+GET http://localhost:8080/users/1/cart
+
+### delete one item from cart 
+DELETE http://localhost:8080/users/1/cart/1
+
+### delete cart items
+DELETE http://localhost:8080/users/1/cart/deleteAll
+
+
+### Create first user
+POST http://localhost:8080/users
+Content-Type: application/json
+# Authorization: Basic hihi@gmail.com:Tester123
+
+{
+
+        "username":"test123@gmail.com",
+        "password": "Tester123",
+        "firstName":"firstName",
+        "lastName": "lastName",
+        "authorities": "ROLE_ADMIN"
+
+}
+### Create second user
+POST http://localhost:8080/users
+Content-Type: application/json
+# Authorization: Basic hihi@gmail.com:Tester123
+
+{
+        "username":"troller@gmail.com",
+        "password": "Tester123",
+        "firstName":"firstName",
+        "lastName": "lastName",
+        "authorities": "ROLE_ADMIN"
+}
+### Create second user
+GET http://localhost:8080/users
+
+### search for user 
+POST http://localhost:8080/users/search
+Content-Type: application/json
+
+{
+    "username":"kang@gmail.com",
+    "password":"Tester123"
+}
+
+
+
+# Template----------------------------------------------------------------------------------------------- 
+PUT http://localhost:8080/users/2
+Content-Type: application/json
+Authorization: Basic hihi4@gmail.com:Tester123
+
+{
+    "username":"hihi5@gmail.com",
+    "password": "Testing12345",
+    "firstName": "firstname",
+    "lastName": "lasterName",
+    "authorities":"",
+    "fetConfig;": 7
+}
+
+PUT http://localhost:8080/users/2/changePassword
+Content-Type: application/json
+Authorization: Basic hihi4@gmail.com:Testing12345
+
+{
+    "username":"dummy@gmail.com",
+    "password": "BODOH123",
+    "firstName": "firstname",
+    "lastName": "lasterName",
+    "authorities":"",
+    "fetConfig;": 7
+}
+
+POST http://localhost:8080/users/2/employees
+Content-Type: application/json
+
+{
+    "id":124,
+    "name" : "john",
+    "vaxStatus": true,
+    "fetDate" : "2021-09-05"
+}
+
+PUT http://localhost:8080/users/1/employees/1
+Content-Type: application/json
+
+{
+    "name" : "john luke",
+    "vaxStatus": true,
+    "fetDate" : "2021-11-7"
+}
+
+DELETE http://localhost:8080/users/2
+GET http://localhost:8080/users/1/employees/124
+GET http://localhost:8080/users/1/employees
+GET http://localhost:8080/users/1/employees/expired 
+GET http://localhost:8080/users/1/employees/today
+
+
+
+
