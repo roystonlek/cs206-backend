@@ -102,11 +102,11 @@ public class ProductController {
 
     @PostMapping("products/{name}/getReco/")
     public List<Product> getReco(@PathVariable String name, @RequestBody Preset p ){
-        System.out.println(name + "-"+p );
+        // System.out.println(name + "-"+p );
         List<Product> test = products.getReco(name,p);
-        for(int i = 0 ; i < test.size();i++){
-            System.out.println(test.get(i));
-        }
+        // for(int i = 0 ; i < test.size();i++){
+        //     System.out.println(test.get(i));
+        // }
         return test;
     }
 
