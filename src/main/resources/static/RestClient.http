@@ -58,6 +58,9 @@ Content-Type: application/json
 POST http://localhost:8080/products/yogurt/getReco/
 Content-Type: application/json
 
+{
+    
+}
 
 
 
@@ -68,7 +71,7 @@ GET http://localhost:8080/products
 GET http://localhost:8080/products/1
 
 ### Product - GET all products under a brand
-GET http://localhost:8080/products/brand/Meiji
+GET http://localhost:8080/products/type/yogurt
 
 
 ### Product - UPDATE a product by specifying product ID

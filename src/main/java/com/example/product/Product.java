@@ -40,6 +40,7 @@ public class Product {
     private double protein; 
     private double sodium; 
     private double fibre;  
+    private String servingSize;
     @Exclude
     @ManyToMany(fetch = FetchType.EAGER )
     @JsonBackReference

@@ -45,7 +45,6 @@ public class UserController {
         } else {
             ret = null;
         }
-        System.out.println("hi im getting here");
         presets.save(new Preset( "Suggested - Weight Loss", user,"Calories-Low", "Sugar-Low","Fat-Low"));
         presets.save( new Preset("Suggested - Bulking ", user, "Calories-High", "Protein-High","Fat-Low"));
         presets.save( new Preset("Suggested - Lean", user, "Protein-High", "Sugar-Low","Fat-Low"));
@@ -62,8 +61,6 @@ public class UserController {
     @CrossOrigin(origins = "http://localhost:3000")
     @PostMapping("/users/search")
     public User loginUser(@Valid @RequestBody User user) {
-
-        System.out.println("SEARCHING BABY");
         return users.findByUsername(user.getUsername()).map(user2 -> {
             if (encoder.matches(user.getPassword(), user2.getPassword())) {
                 return user2;

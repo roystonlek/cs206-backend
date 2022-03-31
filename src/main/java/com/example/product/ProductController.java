@@ -10,6 +10,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
+import com.example.user.*;
 
 @CrossOrigin
 @RestController
@@ -76,7 +77,7 @@ public class ProductController {
     public List<Product> getCart(@PathVariable Long userId){
         List<Product> list = products.getCart(userId);
         if(list == null ){
-            throw new ProductNotFoundException(userId);
+            throw new UserNotFoundException(userId);
         }else{
             return list; 
         }
@@ -103,7 +104,6 @@ public class ProductController {
     public List<Product> getReco(@PathVariable String name, @RequestBody Preset p ){
         System.out.println(name + "-"+p );
         List<Product> test = products.getReco(name,p);
-        System.out.println("HELLOOOOO THIS IS tHE TEST SIZE" + test.size());
         for(int i = 0 ; i < test.size();i++){
             System.out.println(test.get(i));
         }

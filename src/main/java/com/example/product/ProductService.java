@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import com.example.preset.*;
 
+
 @Service
 public class ProductService {
 
@@ -74,17 +75,19 @@ public class ProductService {
     }
 
     public List<Product> getReco(String name, Preset p) {
-        System.out.println(p + "-" + name);
+        // System.out.println(p + "-" + name);
         String factors[] = new String[3];
         String sorts[] = new String[3];
         int count = 0;
         for (int i = 0; i < 3; i++) {
-            String compare = p.getFactor(i + 1).toLowerCase();
+            String compare = p.getFactor(i + 1);
             if(compare == null){
                 continue;
+            }else{
+                compare = compare.toLowerCase();
             }
             String components[] = compare.split("-");
-            System.out.println(Arrays.toString(components));
+            // System.out.println(Arrays.toString(components));
             switch (components[0]) {
                 case "calories":
                     factors[i] = "calories";
@@ -165,48 +168,34 @@ public class ProductService {
             sorts[1] = sorts[0];
             sorts[2] = sorts[0];
         }else if(count ==2){
-            System.out.println(name + factors[0] + factors[1] + sorts[0] + sorts[1]);
-            System.out.println(factors[0] + " THIS IS THE FACTOR WRTF");
             return products.get2Rank(name, factors[0], sorts[0], factors[1], sorts[1]);
         }else if(count == 0 ){
-            System.out.println("i entered here !! ");
             return getByName(name);
         }
-        System.out.println(name + factors[0] + factors[1] + factors[1] + sorts);
-        System.out.println(factors[0] + " THIS IS THE FACTOR WRTF");
         return products.get3Rank(name, factors[0], sorts[0], factors[1], sorts[1], factors[2], sorts[2]);
     }
 
-    // --------------------------------------------------Cart operations
-    // --------------------------------------------------------------------
-
+    // --------------------------------------------------Cart operations--------------------------------------------------------------------
     // adding to cart
     public void addToCart(Long userId, Product product) {
         List<Product> list = users.findById(userId).map(user2 -> {
-            List<Product> productsList = products.getCartList(userId);
-            if (productsList == null) {
-                return null;
-            } else {
-                return productsList;
-            }
-        }).orElse(null);
+            return products.getCartList(userId);
+        }).orElseThrow(()->new UserNotFoundException(userId));
         if (list != null) {
-
             for (int i = 0; i < list.size(); i++) {
                 if (list.get(i).getId().equals(product.getId())) {
                     throw new ProductInCartException(product.getId());
                 }
             }
-
-            products.addToCart(userId, product.getId());
         }
+        products.addToCart(userId, product.getId());
     }
 
     public List<Product> getCart(Long userId) {
         List<Product> list = users.findById(userId).map(user2 -> {
             List<Product> productsList = products.getCartList(userId);
             return productsList;
-        }).orElse(null);
+        }).orElseThrow(()->new UserNotFoundException(userId));
         return list;
     }
 

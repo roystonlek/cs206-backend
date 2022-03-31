@@ -14,14 +14,14 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ProductRepository extends JpaRepository<Product,Long> {
-    @Query(value = "select * from product where name like concat('%',?,'%') " , nativeQuery = true)
+    @Query(value = "select id, brand,calories,fat,fibre,img_url,name,round(price,2) as price , protein , sodium ,sugar, serving_size from product where name like concat('%',?,'%') " , nativeQuery = true)
     List<Product> findByName(String name);
     @Query(value = "select * from product where id = min(?1) " , nativeQuery = true)
     Product findMinOfProperty(String property);
     List<Product> findByBrand(String brand);
 
 
-    @Query(value = "select p.id, brand,calories,fat,fibre,img_url,name,price , protein , sodium ,sugar from cart_products cp , product p where user_id = ? and cp.product_id = p.id ;" , nativeQuery = true)
+    @Query(value = "select p.id, brand,calories,fat,fibre,img_url,name,price , protein , sodium ,sugar, serving_size from cart_products cp , product p where user_id = ? and cp.product_id = p.id ;" , nativeQuery = true)
     List<Product> getCartList(Long userId);
 
     @Modifying
@@ -39,13 +39,6 @@ public interface ProductRepository extends JpaRepository<Product,Long> {
     @Query(value = "insert into cart_products(user_id,product_id) values(?1,?2)" , nativeQuery = true)
     void addToCart(Long userId,Long productId);
 
-    // @Transactional
-    // @Query(value = "select id, price ,ROW_NUMBER() OVER(ORDER BY `?1` desc) Ranking from product where name like Concat('%' , ?2 ,'%');" , nativeQuery = true)
-    // List<String[]> getHighRank(String value , String name );
-    // @Transactional
-    // @Query(value = "select id, price ,ROW_NUMBER() OVER(ORDER BY ?1 desc) Ranking from product where name like '%?2%' " , nativeQuery = true)
-    // List<String[]> getLowRank(String value ,@Param("name")  String name);
-
     @Transactional
     @Query(value = "call looksgood(?1, ?2 , ?3 ,?4,?5,?6,?7) " , nativeQuery = true)
     List<Product> get3Rank(String name,String factor1 ,String sort1 ,String factor2 ,String sort2,String factor3 ,String sort3);
@@ -53,5 +46,4 @@ public interface ProductRepository extends JpaRepository<Product,Long> {
     @Query(value = "call looksgood2(?1, ?2 , ?3 ,?4,?5) " , nativeQuery = true)
     List<Product> get2Rank(String name,String factor1 ,String sort1 ,String factor2 ,String sort2);
 
-    // @Procedure
 }

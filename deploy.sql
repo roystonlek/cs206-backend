@@ -16,7 +16,8 @@ create table product(
     price double,
     protein double,
     sodium double ,
-    sugar double
+    sugar double,
+    servingsize varchar(255)
 );
 
 create table user(
