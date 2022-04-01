@@ -10,7 +10,7 @@ insert into product(id,brand,calories,fat,fibre,img_url,name,price,protein,sodiu
 insert into product(id,brand,calories,fat,fibre,img_url,name,price,protein,sodium,sugar,serving_size) values
 (5,'Dairy Farmers',218,12.0,0.0,'https://media.nedigital.sg/fairprice/fpol/media/images/product/XL/13051600_XL1_20210111.jpg?w=1200&q=70','Thick & Creamy Yogurt - Classic Vanilla',2.75,5.3,69,22.2,'150g');
 insert into product(id,brand,calories,fat,fibre,img_url,name,price,protein,sodium,sugar,serving_size) values
-(6,'Farmers Union',529,9.7,0.0,'https://media.nedigital.sg/fairprice/fpol/media/images/product/XL/155863_LXL1.jpg?w=1200&q=70','Greek Style Yogurt- Natural',8.65,4.8,57,5.2,'100g');
+(6,'Pauls',57,1.6,0.0,'https://media.nedigital.sg/fairprice/fpol/media/images/product/XL/13000991_XL1.jpg?w=1200&q=70','Natural Set Yogurt',9.45,4.1,60,0.0,'100g');
 insert into product(id,brand,calories,fat,fibre,img_url,name,price,protein,sodium,sugar,serving_size) values
 (7,'Fairprice',575,16.7,0.0,'https://media.nedigital.sg/fairprice/fpol/media/images/product/XL/13185255_XL1_20201023.jpg?w=1200&q=70','Peanut Butter- Creamy',3.00,7.0,96,4.4,'500g');
 insert into product(id,brand,calories,fat,fibre,img_url,name,price,protein,sodium,sugar,serving_size) values
