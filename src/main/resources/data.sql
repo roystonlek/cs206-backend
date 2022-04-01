@@ -19,7 +19,8 @@ insert into product(id,brand,calories,fat,fibre,img_url,name,price,protein,sodiu
 (9,'Jif',190,16.0,2.0,'https://media.nedigital.sg/fairprice/fpol/media/images/product/XL/13049992_LXL1.jpg?w=1200&q=70','Peanut Butter Spread- Omega3',5.35,7.0,135,3.0,'33g');
 insert into product(id,brand,calories,fat,fibre,img_url,name,price,protein,sodium,sugar,serving_size) values
 (10,'Mayver\'s',486,9.8,1.6,'https://media.nedigital.sg/fairprice/fpol/media/images/product/XL/13075918_XL1_20210816.jpg?w=1200&q=70','All Natural Spread- Peanut Butter (Smooth)',6.95,4.8,51,0.8,'20g');
-
 insert into product(id,brand,calories,fat,fibre,img_url,name,price,protein,sodium,sugar,serving_size) values
-(11,'Skippy',2.2,2.2,2.2,'https://media.nedigital.sg/fairprice/fpol/media/images/product/XL/47440_XL1_20210827.jpg?w=1200&q=70','Creamy Peanut Butter',2.2,2.2,2.2,2.2,'100g');
+(11,'Skippy',190,16,2.0,'https://media.nedigital.sg/fairprice/fpol/media/images/product/XL/47440_XL1_20210827.jpg?w=1200&q=70','Creamy Peanut Butter',6.15,7.0,150.0,3.0,'32g');
+insert into product(id,brand,calories,fat,fibre,img_url,name,price,protein,sodium,sugar,serving_size) values
+(12,'Smucker\'s',240,13.0,0.0,'https://media.nedigital.sg/fairprice/fpol/media/images/product/XL/77265_XL1_20210107.jpg?w=1200&q=70','Goober Grape - Peanut Butter & Grape Jelly Stripes',5.55,7.0,140,3.0,'53g');
 
