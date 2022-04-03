@@ -28,7 +28,7 @@ insert into product(id,brand,calories,fat,fibre,img_url,name,price,protein,sodiu
 insert into product(id,brand,calories,fat,fibre,img_url,name,price,protein,sodium,sugar,serving_size) values
 (14,'Dutch Lady',62,3.3,0.0,'https://media.nedigital.sg/fairprice/fpol/media/images/product/XL/11570930_XL1_20210118.jpg?w=1024&q=70','UHT Milk - Full Cream(Plain)',2.50,3.2,0,0.0,'100ml');
 insert into product(id,brand,calories,fat,fibre,img_url,name,price,protein,sodium,sugar,serving_size) values
-(15,'Farmhouse',46,1.4,0.0,'https://media.nedigital.sg/fairprice/fpol/media/images/product/XL/13066631_XL1.jpg?w=1024&q=70','UHT Milk - Low Fat',2.10,3.3,0,5.1,'100g');
+(15,'Farmhouse',46,1.4,0.0,'https://media.nedigital.sg/fairprice/fpol/media/images/product/XL/13066631_XL1.jpg?w=1024&q=70','UHT Milk - Low Fat',2.10,3.3,0,5.1,'100ml');
 insert into product(id,brand,calories,fat,fibre,img_url,name,price,protein,sodium,sugar,serving_size) values
 (16,'Harvey Fresh',375,0.5,0.0,'https://media.nedigital.sg/fairprice/fpol/media/images/product/XL/10905401_XL1_20220307.jpg?w=1024&q=70','UHT Milk - Skim',2.30,7.8,90,11.8,'250ml');
 insert into product(id,brand,calories,fat,fibre,img_url,name,price,protein,sodium,sugar,serving_size) values
