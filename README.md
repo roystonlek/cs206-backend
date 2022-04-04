@@ -1,14 +1,14 @@
 # CS206-backend
 
-## CS206 G2T08 Backend Server Setup
-*Please refer to the "CS206 G2T08 Installation Instructions and User Manual" file for detailed step-by-step instructions*
-
 ## Team: Chiak
 - ROYSTON LEK
 - KANG CHIN SHEN
 - LYE JIAN YI
 - LUKE EMMANUEL TEO
 - SHAUN TING
+
+## CS206 G2T08 Backend Server Setup
+*Please refer to the "CS206 G2T08 Installation Instructions and User Manual" file for detailed step-by-step instructions*
 
 ## Steps for Setup
 (1) Open cs206-backend folder and open deploy.sql on workbench and run the script by pressing 'lightning' button after connecting to your sql server.</br>
