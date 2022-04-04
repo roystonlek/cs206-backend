@@ -1,7 +1,7 @@
 # CS206-backend
 
 ## CS206 G2T08 Backend Server Setup
-*Please refer to the "CS206 G2T08 Installation Instructions and User Manual" file for detailed step-by-step instructions
+*Please refer to the "CS206 G2T08 Installation Instructions and User Manual" file for detailed step-by-step instructions*
 
 ## Team: Chiak
 - ROYSTON LEK
