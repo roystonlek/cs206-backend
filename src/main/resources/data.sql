@@ -14,7 +14,7 @@ insert into product(id,brand,calories,fat,fibre,img_url,name,price,protein,sodiu
 insert into product(id,brand,calories,fat,fibre,img_url,name,price,protein,sodium,sugar,serving_size) values
 (7,'Fairprice',575,16.7,0.0,'https://media.nedigital.sg/fairprice/fpol/media/images/product/XL/13185255_XL1_20201023.jpg?w=1200&q=70','Peanut Butter- Creamy',3.00,7.0,96,4.4,'32g');
 insert into product(id,brand,calories,fat,fibre,img_url,name,price,protein,sodium,sugar,serving_size) values
-(8,'Adams',0,16.0,2.0,'https://media.nedigital.sg/fairprice/fpol/media/images/product/XL/10070539_XL1_20220105.jpg?w=1200&q=70','100% Natural Peanut Butter- Crunchy',5.50,8.0,90,1.0,'32g');
+(8,'Adams',190,16.0,2.0,'https://media.nedigital.sg/fairprice/fpol/media/images/product/XL/10070539_XL1_20220105.jpg?w=1200&q=70','100% Natural Peanut Butter- Crunchy',5.50,8.0,90,1.0,'32g');
 insert into product(id,brand,calories,fat,fibre,img_url,name,price,protein,sodium,sugar,serving_size) values
 (9,'Jif',190,16.0,2.0,'https://media.nedigital.sg/fairprice/fpol/media/images/product/XL/13049992_LXL1.jpg?w=1200&q=70','Peanut Butter Spread- Omega3',5.35,7.0,135,3.0,'33g');
 insert into product(id,brand,calories,fat,fibre,img_url,name,price,protein,sodium,sugar,serving_size) values
